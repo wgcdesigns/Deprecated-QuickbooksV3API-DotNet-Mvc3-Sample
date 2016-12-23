@@ -51,9 +51,7 @@ namespace IntuitSampleMVC.Controllers
                     case "qbo":
                         intuitServicesType = IntuitServicesType.QBO;
                         break;
-                    case "qbd":
-                        intuitServicesType = IntuitServicesType.QBD;
-                        break;
+                    
                     default:
                         throw new Exception("Data source type not found.");
                         break;
@@ -62,8 +60,10 @@ namespace IntuitSampleMVC.Controllers
 
                 OAuthRequestValidator oauthValidator = new OAuthRequestValidator(accessToken, accessTokenSecret, consumerKey, consumerSecret);
                 ServiceContext context = new ServiceContext(realmId, intuitServicesType, oauthValidator);
-                DataService dataService = new DataService(context);
-                List<Customer> customers = dataService.FindAll(new Customer(), 1, 100).ToList();
+                //DataService dataService = new DataService(context);
+                //List<Customer> customers = dataService.FindAll(new Customer(), 1, 100).ToList();
+                QueryService<Customer> entityQuery = new QueryService<Customer>(context);
+                List<Customer> customers = entityQuery.ExecuteIdsQuery("SELECT * FROM Customer").ToList<Customer>();
                 ViewBag.MyCollection = customers;
                 ViewBag.CustomerCount = customers.Count();
 
