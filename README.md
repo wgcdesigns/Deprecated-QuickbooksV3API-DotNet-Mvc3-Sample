@@ -17,6 +17,7 @@ In addition to the changes in the previous section, certain references are auto-
 * .NET Framework 4.5
 * IIS Express
 * Windows 7
+* MVC3 package
 
 
 To get started
