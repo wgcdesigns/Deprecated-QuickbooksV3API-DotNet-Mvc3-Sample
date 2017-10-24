@@ -1,10 +1,10 @@
 QuickbooksV3API-DotNet-Mvc3-Sample
 ==================================
+Note: This sample app is obsolete/deprecated
 
 MVC3 Sample Code for the QuickBooks API V3
 
 
-**Binaries:** [![Nuget](https://img.shields.io/badge/Nuget-2.9.0-blue.svg)](https://www.nuget.org/packages/IppDotNetSdkForQuickBooksApiV3)
 
 
 Requirements
@@ -12,9 +12,9 @@ Requirements
 
 In addition to the changes in the previous section, certain references are auto-linked:
 
-* Visual Studio 2012
+
 * [NuGet](http://www.nuget.org/)
-* .NET Framework 4.5
+* .NET Framework 4.6.1
 * IIS Express
 * Windows 7
 * MVC3 package
